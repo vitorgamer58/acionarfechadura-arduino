@@ -6,3 +6,5 @@ código do arduino baseada em um código open source para acender um LED via web
 é necessário um Ethernet Shield
 o código vem configurado para ser o ip 192.168.0.177 na rede local, aceitando solicitações na porta 8090
 o relé funciona como um botão para um acionador de fechadura MKN RX-PF/12V
+
+o arquivo .aia é um compactado do Thunkable classic, mas também pode ser aberto pelo MIT App Inventor
