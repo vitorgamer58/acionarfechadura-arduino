@@ -2,10 +2,7 @@
 // Biblioteca utilizada para comunicação com o Arduino
 #include <Ethernet.h> 
  
-// A linha abaixo permite definir o endereço físico (MAC ADDRESS) da placa...
-//de rede.  
-byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-
+byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }; //(MAC ADDRESS) da placa de rede
 byte ip[] = { 192, 168, 0, 177 }; // Define o endereço IP.
 
 // Porta onde estará aberta para comunicação Internet e Arduino.
@@ -43,11 +40,11 @@ void loop(){
           client.println("<HTML>");
           client.println("<BODY>");
           client.println("<H1>Abre Porta</H1>");
-          client.println("<H1>Projeto basico para abrir o porta pelo celular</H1>");
+          client.println("<H1>Projeto basico para abrir porta pela internet</H1>");
           client.println("<hr />");
           client.println("<br />");
           
-          client.println("<a href=\"comandoabrir/abrir\"\">Abrir Portão</a>");
+          client.println("<a href=\"comandoabrir/abrir\"\">Abrir Porta</a>");
           
           client.println("</BODY>");
           client.println("</HTML>");
@@ -57,9 +54,9 @@ void loop(){
           
           if(readString.indexOf("comandoabrir/abrir") > 0)
           {
-            digitalWrite(Pin, HIGH);  // manda comando para abrir o Portão.
+            digitalWrite(Pin, HIGH);  // liga o relê.
             delay(90); // Espera por 1s
-            digitalWrite(Pin, LOW);  // para de mandar comando.
+            digitalWrite(Pin, LOW);  // desliga o relê
           }
           
           readString="";    
